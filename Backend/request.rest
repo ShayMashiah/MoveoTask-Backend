@@ -1,0 +1,15 @@
+###
+POST http://localhost:5000/
+Content-Type: application/json
+{
+  "index": 4,
+  "title": "Recursion Task",
+  "assignment": "You need to write a recursive function to calculate the factorial of a number.\n\nWrite a function named `factorial` that will:\n\n- Accept a positive integer `n` as a parameter.\n- Return the factorial of `n`, which is the product of all positive integers less than or equal to `n`.\n\nExample:\n\n`factorial(5)` should return `120` because `5 * 4 * 3 * 2 * 1 = 120`.",
+  "solution": "const factorial = (n) => {\n  if (n === 0) {\n    return 1;\n  }\n  return n * factorial(n - 1);\n};"
+}
+
+
+###
+
+GET http://localhost:5000/code/1
+Content-Type: application/json
