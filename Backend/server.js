@@ -22,15 +22,6 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use((req, res, next) => {
-  console.log(`Received request: ${req.method} ${req.url}`);
-  next();
-});
-
-// app.get("/code/:index", (req, res) => {
-//   const { index } = req.params; // חילוץ הערך הנכון
-//   res.json({ message: `Code block with index ${index}` });
-// });
 
 app.use('/', codeBlockRoutes);
 
